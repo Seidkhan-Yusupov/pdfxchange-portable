@@ -24,7 +24,7 @@ try {
     }
 
     Expand-Archive -LiteralPath $ArchivePath -DestinationPath $AppPath
-    $Executables = @(Get-ChildItem -LiteralPath $AppPath -Recurse -File -Filter 'PDFXEdit.exe')
+    $Executables = @(Get-ChildItem -LiteralPath $AppPath -Recurse -File -Filter 'PXCEditor.exe')
     if ($Executables.Count -ne 1) {
         throw "Expected one PDFXEdit.exe in the portable package; found $($Executables.Count)."
     }
